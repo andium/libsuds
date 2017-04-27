@@ -46,12 +46,12 @@ public class SimpleUnixDomainSocket implements Closeable{
      */
     static {
         String target = getTarget();
-        staticLogger.info("Attempting to load " + target);
+        staticLogger.debug("Attempting to load {}", target);
 
         try {
             loadLib(target);
         } catch (IOException e){
-            staticLogger.error("Unable to load target " + target, e);
+            staticLogger.error("Unable to load target {}", target, e);
         }
     }
 

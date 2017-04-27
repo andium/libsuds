@@ -7,7 +7,7 @@ import java.io.IOException;
 
 /**
  * Creates a Unix domain socket and connects it to the server specified by the socket file. This class
- * shouldn't only be used to connect to a socket, being served by an existing server. If using
+ * shouldn't only be used to connect to a socket, being served by an existing server.
  */
 public class SimpleUnixDomainSocketClient extends SimpleUnixDomainSocket {
 

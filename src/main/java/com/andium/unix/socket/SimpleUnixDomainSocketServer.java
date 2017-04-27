@@ -61,7 +61,7 @@ public class SimpleUnixDomainSocketServer extends SimpleUnixDomainSocket{
         if ((nativeSocketFileHandle = nativeCreate(socketFile, socketType)) == -1){
             throw new IOException("Unable to open domain socket");
         }
-        logger.debug("Socket created with handle " + nativeSocketFileHandle);
+        logger.debug("Socket created with handle {}", nativeSocketFileHandle);
 
         inputStream = new SimpleUnixDomainSocketInputStream();
         if (socketType == SOCK_STREAM){
@@ -85,7 +85,7 @@ public class SimpleUnixDomainSocketServer extends SimpleUnixDomainSocket{
         if ((nativeSocketFileHandle = nativeListen(socketFile, socketType, connections)) == -1){
             throw new IOException("Unable to open and listen on Unix domain socket");
         }
-        logger.debug("listening to socket at " + socketfile);
+        logger.debug("listening to socket at {}", socketfile);
     }
 
     /**
@@ -102,7 +102,7 @@ public class SimpleUnixDomainSocketServer extends SimpleUnixDomainSocket{
         if ((newSocketFileHandle = nativeAccept(nativeSocketFileHandle, socketType))==-1){
             throw new IOException("Unable to accept on Unix domain socket");
         }
-        logger.debug("Accept completed with code " + newSocketFileHandle);
+        logger.debug("Accept completed with code {}", newSocketFileHandle);
         return new SimpleUnixDomainSocket(newSocketFileHandle, socketType);
     }
 
