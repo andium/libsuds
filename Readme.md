@@ -6,21 +6,6 @@ It provides a simple **blocking** socket which is appropriate for small scale us
 
 Requires Java 7 or above. 
 
-## Releases
-
-Check the releases tab to grab the latest version. 
-
-The release JAR will contain pre-compiled native libraries for the following platforms/archs
-64-bit macOS
-64-bit Linux-x86_64
-32-bit Linux-ARM
-
-This adds a total of 85kb to the resulting release but covers the majority of uses cases for the library. If your needs differ, please open an issue and let us know. 
-
-### Maven / Gradle
-
-We are currently awaiting our namespace to be created in Maven Central. Once it has been created, this section will be updated with the appropriate information.
-
 ## Dependencies 
 
 Apart from the native library, libSUDS contains a single dependency, which is the SLF4J logging facade. libSUDS only provides the API jar, allowing callers to provide their own logging implementation. 
